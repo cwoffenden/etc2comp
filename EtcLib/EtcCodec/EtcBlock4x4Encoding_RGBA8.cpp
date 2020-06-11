@@ -356,12 +356,12 @@ namespace Etc
 				ulliSelectorBits |= ((unsigned long long int)m_auiAlphaSelectors[uiPixel]) << uiShift;
 			}
 
-			m_pencodingbitsA8->data.selectors0 = ulliSelectorBits >> 40;
-			m_pencodingbitsA8->data.selectors1 = ulliSelectorBits >> 32;
-			m_pencodingbitsA8->data.selectors2 = ulliSelectorBits >> 24;
-			m_pencodingbitsA8->data.selectors3 = ulliSelectorBits >> 16;
-			m_pencodingbitsA8->data.selectors4 = ulliSelectorBits >> 8;
-			m_pencodingbitsA8->data.selectors5 = ulliSelectorBits;
+			m_pencodingbitsA8->data.selectors0 = static_cast<unsigned>(ulliSelectorBits >> 40);
+			m_pencodingbitsA8->data.selectors1 = static_cast<unsigned>(ulliSelectorBits >> 32);
+			m_pencodingbitsA8->data.selectors2 = static_cast<unsigned>(ulliSelectorBits >> 24);
+			m_pencodingbitsA8->data.selectors3 = static_cast<unsigned>(ulliSelectorBits >> 16);
+			m_pencodingbitsA8->data.selectors4 = static_cast<unsigned>(ulliSelectorBits >>  8);
+			m_pencodingbitsA8->data.selectors5 = static_cast<unsigned>(ulliSelectorBits >>  0);
 		}
 
 	}

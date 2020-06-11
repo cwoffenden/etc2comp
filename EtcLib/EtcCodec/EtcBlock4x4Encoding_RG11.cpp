@@ -411,12 +411,12 @@ namespace Etc
 		m_pencodingbitsRG11->data.tableIndexR = m_uiRedModifierTableIndex;
 		m_pencodingbitsRG11->data.multiplierR = (unsigned char)roundf(m_fRedMultiplier);
 
-		m_pencodingbitsRG11->data.selectorsR0 = ulliSelectorBitsR >> 40;
-		m_pencodingbitsRG11->data.selectorsR1 = ulliSelectorBitsR >> 32;
-		m_pencodingbitsRG11->data.selectorsR2 = ulliSelectorBitsR >> 24;
-		m_pencodingbitsRG11->data.selectorsR3 = ulliSelectorBitsR >> 16;
-		m_pencodingbitsRG11->data.selectorsR4 = ulliSelectorBitsR >> 8;
-		m_pencodingbitsRG11->data.selectorsR5 = ulliSelectorBitsR;
+		m_pencodingbitsRG11->data.selectorsR0 = static_cast<unsigned>(ulliSelectorBitsR >> 40);
+		m_pencodingbitsRG11->data.selectorsR1 = static_cast<unsigned>(ulliSelectorBitsR >> 32);
+		m_pencodingbitsRG11->data.selectorsR2 = static_cast<unsigned>(ulliSelectorBitsR >> 24);
+		m_pencodingbitsRG11->data.selectorsR3 = static_cast<unsigned>(ulliSelectorBitsR >> 16);
+		m_pencodingbitsRG11->data.selectorsR4 = static_cast<unsigned>(ulliSelectorBitsR >>  8);
+		m_pencodingbitsRG11->data.selectorsR5 = static_cast<unsigned>(ulliSelectorBitsR >>  0);
 
 		if (m_pblockParent->GetImageSource()->GetFormat() == Image::Format::RG11)
 		{
@@ -433,12 +433,12 @@ namespace Etc
 		m_pencodingbitsRG11->data.tableIndexG = m_uiGrnModifierTableIndex;
 		m_pencodingbitsRG11->data.multiplierG = (unsigned char)roundf(m_fGrnMultiplier);
 
-		m_pencodingbitsRG11->data.selectorsG0 = ulliSelectorBitsG >> 40;
-		m_pencodingbitsRG11->data.selectorsG1 = ulliSelectorBitsG >> 32;
-		m_pencodingbitsRG11->data.selectorsG2 = ulliSelectorBitsG >> 24;
-		m_pencodingbitsRG11->data.selectorsG3 = ulliSelectorBitsG >> 16;
-		m_pencodingbitsRG11->data.selectorsG4 = ulliSelectorBitsG >> 8;
-		m_pencodingbitsRG11->data.selectorsG5 = ulliSelectorBitsG;
+		m_pencodingbitsRG11->data.selectorsG0 = static_cast<unsigned>(ulliSelectorBitsG >> 40);
+		m_pencodingbitsRG11->data.selectorsG1 = static_cast<unsigned>(ulliSelectorBitsG >> 32);
+		m_pencodingbitsRG11->data.selectorsG2 = static_cast<unsigned>(ulliSelectorBitsG >> 24);
+		m_pencodingbitsRG11->data.selectorsG3 = static_cast<unsigned>(ulliSelectorBitsG >> 16);
+		m_pencodingbitsRG11->data.selectorsG4 = static_cast<unsigned>(ulliSelectorBitsG >>  8);
+		m_pencodingbitsRG11->data.selectorsG5 = static_cast<unsigned>(ulliSelectorBitsG >>  0);
 
 	}
 
